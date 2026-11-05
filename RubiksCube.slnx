@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="RubiksCube/RubiksCube.vcxproj" Id="bbabe51a-4cd7-4816-af9e-507256fefcce" />
+</Solution>
