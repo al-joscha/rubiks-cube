@@ -30,6 +30,12 @@
     <ClCompile Include="TestTriangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CubieRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestCubie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ShaderUtil.hpp">
@@ -44,6 +50,12 @@
     <ClInclude Include="GameInterface.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CubieRenderer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCubie.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="FSimple.glsl">
@@ -52,5 +64,13 @@
     <CopyFileToFolders Include="VSimple.glsl">
       <Filter>Shader</Filter>
     </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FColor.glsl">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="VColor.glsl">
+      <Filter>Shader</Filter>
+    </None>
   </ItemGroup>
 </Project>

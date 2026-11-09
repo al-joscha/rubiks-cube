@@ -145,6 +145,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CubieRenderer.cpp" />
     <ClCompile Include="RubiksCube.cpp" />
     <ClCompile Include="ShaderUtil.cpp" />
     <CopyFileToFolders Include="FSimple.glsl">
@@ -152,12 +153,15 @@
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </CopyFileToFolders>
+    <ClCompile Include="TestCubie.cpp" />
     <ClCompile Include="TestGlm.cpp" />
     <ClCompile Include="TestTriangle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CubieRenderer.hpp" />
     <ClInclude Include="GameInterface.hpp" />
     <ClInclude Include="ShaderUtil.hpp" />
+    <ClInclude Include="TestCubie.hpp" />
     <ClInclude Include="TestGlm.hpp" />
     <ClInclude Include="TestTriangle.hpp" />
   </ItemGroup>
@@ -167,6 +171,10 @@
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FColor.glsl" />
+    <None Include="VColor.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

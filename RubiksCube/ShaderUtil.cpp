@@ -12,7 +12,7 @@ GLuint ShaderUtil::CreateShaderProgram(const char* vertexFilename, const char* f
 	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	glShaderSource(vertexShader, 1, &vertexString, NULL);
 	PrintOGlErrors();
-	glCompileShader(vertexShader); // an dieser Stelle können Fehler auftreten 
+	glCompileShader(vertexShader);
 	PrintOGlErrors();
 	int vertCompiled;
 	glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &vertCompiled);
@@ -27,7 +27,7 @@ GLuint ShaderUtil::CreateShaderProgram(const char* vertexFilename, const char* f
 	const char* fragmentString = fragmentProgram.c_str();
 	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 	glShaderSource(fragmentShader, 1, &fragmentString, NULL);
-	
+
 	PrintOGlErrors();
 	glCompileShader(fragmentShader);
 	PrintOGlErrors();
@@ -55,9 +55,8 @@ GLuint ShaderUtil::CreateShaderProgram(const char* vertexFilename, const char* f
 
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
-	
+
 	return shaderProgram;
-	
 }
 
 std::string ShaderUtil::LoadFile(const char* fileName)
@@ -94,7 +93,7 @@ void ShaderUtil::PrintProgramLog(GLuint program)
 	int memLength;
 	int messageLength;
 	char* log;
-	
+
 	glGetProgramiv(program, GL_INFO_LOG_LENGTH, &memLength);
 	if (memLength == 0)
 		return;

@@ -43,11 +43,13 @@ void TestGlm::Initialize()
 
 void TestGlm::Update(double deltaTime)
 {
+	GameInterface::Update(deltaTime);
+
 	glm::quat rotation_velocity = glm::quat(0.0f, glm::radians(180.0f), 0.0f, 0.0f);
+	
 	glm::quat time_derivation = 0.0f * rotation_velocity * m_orientationQuaternion;
 	m_orientationQuaternion += time_derivation * static_cast<float>(deltaTime);
 	m_orientationQuaternion = glm::normalize(m_orientationQuaternion);
-
 
 	float test_length = glm::length(m_orientationQuaternion);
 	glm::mat4 final_rotation = glm::mat4_cast(m_orientationQuaternion);
