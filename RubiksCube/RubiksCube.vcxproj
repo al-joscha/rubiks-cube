@@ -146,6 +146,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CubieRenderer.cpp" />
+    <ClCompile Include="InputSystem.cpp" />
+    <ClCompile Include="KeyObserver.cpp" />
     <ClCompile Include="RubiksCube.cpp" />
     <ClCompile Include="ShaderUtil.cpp" />
     <CopyFileToFolders Include="FSimple.glsl">
@@ -156,15 +158,19 @@
     <ClCompile Include="TestCompoundCube.cpp" />
     <ClCompile Include="TestCubie.cpp" />
     <ClCompile Include="TestGlm.cpp" />
+    <ClCompile Include="TestKey.cpp" />
     <ClCompile Include="TestTriangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CubieRenderer.hpp" />
     <ClInclude Include="GameInterface.hpp" />
+    <ClInclude Include="InputSystem.hpp" />
+    <ClInclude Include="KeyObserver.hpp" />
     <ClInclude Include="ShaderUtil.hpp" />
     <ClInclude Include="TestCompoundCube.hpp" />
     <ClInclude Include="TestCubie.hpp" />
     <ClInclude Include="TestGlm.hpp" />
+    <ClInclude Include="TestKey.hpp" />
     <ClInclude Include="TestTriangle.hpp" />
   </ItemGroup>
   <ItemGroup>

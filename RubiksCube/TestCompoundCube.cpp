@@ -34,15 +34,25 @@ void TestCompoundCube::Render(const float aspectRatio)
         * glm::rotate(glm::mat4(1.0f), m_turningAngle, glm::vec3(1.0f));
 
 
-    auto offset = m_cubieRenderer.GetCubieExtension();
+    float offset = m_cubieRenderer.GetCubieExtension();
     // auto offset = m_cubieRenderer.GetCubieExtension() * 1.025f;
     for (int i : {0, 1, 2})
     {
         for (int j : {0, 1, 2})
         {
             for (int k : {0, 1, 2})
-            {
-                glm::mat4 compound = glm::translate(object_to_clip, glm::vec3(i - 1, j - 1, k - 1) * offset);
+            {   
+				if (i == 1 && j == 1 && k == 1)
+				{
+					continue;
+				}
+                glm::mat4 copied = object_to_clip;
+                if (j==1)
+                {
+                    copied = glm::rotate(object_to_clip, glm::radians(20.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+                }
+
+            	glm::mat4 compound = glm::translate(copied, glm::vec3(i - 1, j - 1, k - 1) * offset);
                 compound = compound * m_cubeState[i][j][k];
                 m_cubieRenderer.Render(compound);
             }
