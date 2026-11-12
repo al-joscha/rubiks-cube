@@ -6,7 +6,10 @@
 class CubieRenderer
 {
 public:
-    float GetCubieExtension() const { return 2.0f * m_offset; }
+	float GetCubieExtension() const
+    {
+        return 2.0f * m_offset;
+    }
 
     void Initialize();
     void Render(const glm::mat4& transformationMatrix);

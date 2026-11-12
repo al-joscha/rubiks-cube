@@ -153,6 +153,7 @@
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </CopyFileToFolders>
+    <ClCompile Include="TestCompoundCube.cpp" />
     <ClCompile Include="TestCubie.cpp" />
     <ClCompile Include="TestGlm.cpp" />
     <ClCompile Include="TestTriangle.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="CubieRenderer.hpp" />
     <ClInclude Include="GameInterface.hpp" />
     <ClInclude Include="ShaderUtil.hpp" />
+    <ClInclude Include="TestCompoundCube.hpp" />
     <ClInclude Include="TestCubie.hpp" />
     <ClInclude Include="TestGlm.hpp" />
     <ClInclude Include="TestTriangle.hpp" />
